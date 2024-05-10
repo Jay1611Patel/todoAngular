@@ -1,5 +1,3 @@
-// todo.service.ts
-
 import { Injectable } from '@angular/core';
 import { Todo } from './todo';
 
@@ -15,8 +13,8 @@ export class TodoService {
     this.todos.push(todo);
   }
 
-  removeTodoById(id: string) {
-    this.todos = this.todos.filter(todo => todo.id !== id);
+  removeTodo(todo: Todo) {
+    this.todos = this.todos.filter(item => item !== todo);
   }
 
   getAllTodos(): Todo[] {
